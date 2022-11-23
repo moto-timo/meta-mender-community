@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/patches:"
 
-SRC_URI:append_imx6ul-var-dart = " \
+SRC_URI:append:imx6ul-var-dart = " \
     file://0001-mx6ul_var_dart-Remove-unneeded-boot-settings.patch \
     file://0001-Integration-of-Mender-boot-code-into-U-Boot.patch \
     file://0001-Disable-CONFIG_BOOTCOMMAND-and-enable-CONFIG_MENDER_.patch \
@@ -8,12 +8,12 @@ SRC_URI:append_imx6ul-var-dart = " \
     file://0001-Add-Mender-MTD-variables-to-config-whitelist.patch \
     file://0001-imx6ul-var-dart-Find-splash-screen-on-active-rootfs-.patch \
 "
-SRC_URI:remove_imx6ul-var-dart = " \
+SRC_URI:remove:imx6ul-var-dart = " \
     file://0006-env-Kconfig-Add-descriptions-so-environment-options-.patch \
     file://0003-Integration-of-Mender-boot-code-into-U-Boot.patch \
     file://0004-Disable-CONFIG_BOOTCOMMAND-and-enable-CONFIG_MENDER_.patch \
 "
-SRC_URI:append_var-som-mx6 = " \
+SRC_URI:append:var-som-mx6 = " \
     file://0001-mx6var_som-Remove-unneeded-boot-settings.patch \
     file://0001-Integration-of-Mender-boot-code-into-U-Boot.patch \
     file://0001-Disable-CONFIG_BOOTCOMMAND-and-enable-CONFIG_MENDER_.patch \
@@ -25,7 +25,7 @@ SRC_URI:append_var-som-mx6 = " \
     file://0004-mx6var_som-Clear-MMC_BOOT_ENV_SETTINGS-when-configur.patch \
     file://0001-mx6var_som-Find-splash-screen-on-active-rootfs-with-.patch \
 "
-SRC_URI:remove_var-som-mx6 = " \
+SRC_URI:remove:var-som-mx6 = " \
     file://0006-env-Kconfig-Add-descriptions-so-environment-options-.patch \
     file://0003-Integration-of-Mender-boot-code-into-U-Boot.patch \
     file://0004-Disable-CONFIG_BOOTCOMMAND-and-enable-CONFIG_MENDER_.patch \
@@ -43,5 +43,5 @@ MENDER_VARISCITE_UBOOT_PRE_SETUP_COMMANDS = " \
     setenv kernel_addr_r \${loadaddr}; \
 "
 
-MENDER_UBOOT_PRE_SETUP_COMMANDS_var-som-mx6 = "${MENDER_VARISCITE_UBOOT_PRE_SETUP_COMMANDS}"
-MENDER_UBOOT_PRE_SETUP_COMMANDS_imx6ul-var-dart = "${MENDER_VARISCITE_UBOOT_PRE_SETUP_COMMANDS}"
+MENDER_UBOOT_PRE_SETUP_COMMANDS:var-som-mx6 = "${MENDER_VARISCITE_UBOOT_PRE_SETUP_COMMANDS}"
+MENDER_UBOOT_PRE_SETUP_COMMANDS:imx6ul-var-dart = "${MENDER_VARISCITE_UBOOT_PRE_SETUP_COMMANDS}"
