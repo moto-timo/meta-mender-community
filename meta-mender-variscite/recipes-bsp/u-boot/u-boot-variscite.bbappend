@@ -10,10 +10,10 @@ make_u_boot_spl_image() {
     dd if=${DEPLOYDIR}/u-boot.img of=${DEPLOYDIR}/u-boot-spl-${PV}-${PR}.img bs=1K seek=68 conv=notrunc
 }
 
-do_deploy:append_var-som-mx6() {
+do_deploy:append:var-som-mx6() {
     make_u_boot_spl_image
 }
 
-do_deploy:append_imx6ul-var-dart() {
+do_deploy:append:imx6ul-var-dart() {
     make_u_boot_spl_image
 }
