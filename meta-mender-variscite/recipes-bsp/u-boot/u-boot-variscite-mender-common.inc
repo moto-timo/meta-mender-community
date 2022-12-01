@@ -4,7 +4,6 @@ SRC_URI:append:imx6ul-var-dart = " \
     file://0001-mx6ul_var_dart-Remove-unneeded-boot-settings.patch \
     file://0001-Integration-of-Mender-boot-code-into-U-Boot.patch \
     file://0001-Disable-CONFIG_BOOTCOMMAND-and-enable-CONFIG_MENDER_.patch \
-    file://0005-fw_env_main.c-Fix-incorrect-size-for-malloc-ed-strin.patch \
     file://0001-Add-Mender-MTD-variables-to-config-whitelist.patch \
     file://0001-imx6ul-var-dart-Find-splash-screen-on-active-rootfs-.patch \
 "
@@ -17,7 +16,6 @@ SRC_URI:append:var-som-mx6 = " \
     file://0001-mx6var_som-Remove-unneeded-boot-settings.patch \
     file://0001-Integration-of-Mender-boot-code-into-U-Boot.patch \
     file://0001-Disable-CONFIG_BOOTCOMMAND-and-enable-CONFIG_MENDER_.patch \
-    file://0005-fw_env_main.c-Fix-incorrect-size-for-malloc-ed-strin.patch \
     file://0001-Add-Mender-MTD-variables-to-config-whitelist.patch \
     file://0001-mx6var_som-Remove-MMC_BOOTCMD-for-Mender.patch \
     file://0002-mx6var_som-Remove-bootenv-and-MMC-boot-processing.patch \
