@@ -39,7 +39,7 @@ MENDER_VARISCITE_UBOOT_PRE_SETUP_COMMANDS = " \
     if test \\\"\${optargs}\\\" != \\\"\\\"; then run optargs; fi; \
     if test \\\"\${ramsize_check}\\\" != \\\"\\\"; then run ramsize_check; fi; \
     run findfdt; \
-    setenv mender_dtb_name \${fdt_file}; \
+    setenv mender_dtb_name \${fdtfile}; \
     setenv kernel_addr_r \${loadaddr}; \
 "
 
